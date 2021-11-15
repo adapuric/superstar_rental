@@ -1,0 +1,2 @@
+class Superstar < ApplicationRecord
+end
