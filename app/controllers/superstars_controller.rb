@@ -4,6 +4,6 @@ class SuperstarsController < ApplicationController
   end
 
   def show
-
+    @superstar = Superstar.find(params[:id])
   end
 end
