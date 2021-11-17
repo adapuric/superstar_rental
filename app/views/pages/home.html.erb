@@ -1,1 +1,57 @@
-<h1>SuperStars</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80);">
+  <div class="container">
+    <h1 class="mb-5">Find a celebrity to attend <br>your event</h1>
+    <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+      <div class="search-form-control form-group">
+        <input class="form-control string required" type="text" name="search[query]" id="search_query" />
+        <button name="button" type="submit" class="btn btn-dark">
+        <i class="fas fa-search"></i> Search
+        </button>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<br>
+<br>
+
+<div class="container">
+  <h1 class="text-center mb-5">Featured</h1>
+  <div class="d-flex col justify-content-center">
+    <div class="row justify-content-between">
+      <% @superstars.first(3).each do |superstar| %>
+        <div class="card mr-5" style="width: 18rem;">
+          <%= image_tag superstar.image_url, class: "card-img-top" %>
+          <div class="card-body">
+            <h5 class="card-title"><%= superstar.name %></h5>
+            <p class="card-text"> <%= superstar.event_type %> </p>
+            <%= link_to 'Pick Me!', superstar, class:"btn btn-dark"%>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<br>
+<br>
+
+<div class="container">
+  <div class="card-category mb-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80)">
+    Music
+  </div>
+  <div class="card-category mb-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1459865264687-595d652de67e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80)">
+    Sports
+  </div>
+    <div class="card-category mb-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1581548708095-7158f2e63857?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80)">
+    TV Person
+  </div>
+  <div class="card-category mb-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1571456331030-a1369bc759dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80)">
+    Comedy
+  </div>
+<br>
+<br>
+  <div>
+  <%= link_to 'All superstars', superstars_path, class:'btn btn-dark pull-right'%>
+  </div>
+</div>
