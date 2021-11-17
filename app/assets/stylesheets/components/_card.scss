@@ -3,11 +3,17 @@
   width: 280px;
   margin-bottom: 25px;
   margin-right: 10px;
-  border-radius: 15px;
+  border-radius: 15px 15px 15px 15px;
   height: fit-content;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
   transition: 0.3s;
   border: none;
+}
+
+.card img {
+  height: 200px;
+  width: 289px;
+  border-radius: 15px 15px 0px 0px;
 }
 
 .card:hover {
@@ -17,7 +23,7 @@
 .card-body {
   background-color: rgba(101, 0, 79, 1);
   height: fit-content;
-  border-radius: 15px;
+  border-radius: 0px 0px 15px 15px;
 }
 
 .card-title {
