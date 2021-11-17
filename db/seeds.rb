@@ -14,7 +14,10 @@ end
     name: Faker::Movies::StarWars.character,
     event_type: ["wedding", "party", "graduation", "honeymoons"].sample,
     availabilities: [true, false].sample,
-    user_id: User.all.sample.id
+    user_id: User.all.sample.id,
+    bio: "My speciality is to....",
+    price: [500, 600, 700, 1000].sample,
+    region: ["North America", "South America", "Europe", "Asia", "Australia"].sample
   )
   puts "Creating superstars with id #{superstar.id}"
 end
