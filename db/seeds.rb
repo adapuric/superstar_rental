@@ -25,7 +25,7 @@ end
 #   puts "Creating superstars with id #{superstar.id}"
 # end
 puts "Creating Superstar"
-elon = Superstar.create!(
+Superstar.create!(
   name: "Elon Musk",
   event_type: "honeymoon",
   availabilities: true,
@@ -36,7 +36,7 @@ elon = Superstar.create!(
   region: "North America",
 )
 
-kimk = Superstar.create!(
+Superstar.create!(
   name: "Kim Kardashian",
   event_type: "wedding",
   availabilities: true,
@@ -47,7 +47,7 @@ kimk = Superstar.create!(
   region: "Asia",
 )
 
-chalamet = Superstar.create!(
+Superstar.create!(
   name: "Timothee Chalamet",
   event_type: "graduation",
   availabilities: true,
@@ -58,7 +58,7 @@ chalamet = Superstar.create!(
   region: "Europe",
 )
 
-dicaprio = Superstar.create!(
+Superstar.create!(
   name: "Young Leonardo DiCaprio",
   event_type: "party",
   availabilities: true,
@@ -69,7 +69,7 @@ dicaprio = Superstar.create!(
   region: "Europe",
 )
 
-depp = Superstar.create!(
+Superstar.create!(
   name: "Young Johny Depp",
   event_type: "honeymoon",
   availabilities: true,
@@ -80,7 +80,7 @@ depp = Superstar.create!(
   region: "North America",
 )
 
-kelly = Superstar.create!(
+Superstar.create!(
   name: "Machine Gun Kelly",
   event_type: "wedding",
   availabilities: true,
@@ -91,7 +91,7 @@ kelly = Superstar.create!(
   region: "Australia",
 )
 
-davidson = Superstar.create!(
+Superstar.create!(
   name: "Pete Davidson",
   event_type: "graduation",
   availabilities: true,
@@ -102,7 +102,7 @@ davidson = Superstar.create!(
   region: "South America",
 )
 
-rocky = Superstar.create!(
+Superstar.create!(
   name: "ASAP",
   event_type: "graduation",
   availabilities: true,
@@ -113,7 +113,7 @@ rocky = Superstar.create!(
   region: "Europe",
 )
 
-liam = Superstar.create!(
+Superstar.create!(
   name: "Liam Hemsworth",
   event_type: "party",
   availabilities: true,
