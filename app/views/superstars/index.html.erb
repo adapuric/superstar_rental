@@ -23,7 +23,7 @@
       <div class="row justify-content-between">
           <% @superstars.each do |superstar| %>
             <div class="card" style="width: 18rem;">
-              <img class="card-img-top" src="..." alt="Card image cap">
+              <%= image_tag superstar.image_url, class: "card-img-top" %>
               <div class="card-body">
                 <h5 class="card-title"><%= superstar.name %></h5>
                 <p class="card-text"> <%= superstar.event_type %> </p>
