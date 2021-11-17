@@ -1,6 +1,6 @@
 puts "Creating superstars and users..."
 
-3.times do
+10.times do
   user = User.create!(
     email: Faker::Internet.email,
     password: Faker::Name.name,
@@ -9,7 +9,7 @@ puts "Creating superstars and users..."
   puts "Creating users with id #{user.id}"
 end
 
-3.times do
+10.times do
   superstar = Superstar.create!(
     name: Faker::Movies::StarWars.character,
     event_type: ["wedding", "party", "graduation", "honeymoons"].sample,
