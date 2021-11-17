@@ -1,13 +1,22 @@
-<h3>Make a new booking for <%= @superstar.name %> </h3>
-<p> I am available for <%= @superstar.event_type %></p>
-<p> Bio: <%= @superstar.bio %></p>
-<p> I come at a price of: € <%= @superstar.price %></p>
-<p>I am available in the following regions: <%= @superstar.region %></p>
-<br>
+<div class="container">
+  <div class="row text-center">
+    <div class="col-sm-8">
+      <h3>Make a new booking for <%= @superstar.name %> </h3>
+      <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
+    </div>
+    <div class="col-sm-4">
+      <p> I am available for <%= @superstar.event_type %></p>
+      <p> Bio: <%= @superstar.bio %></p>
+      <p> I come at a price of: € <%= @superstar.price %></p>
+      <p>I am available in the following regions: <%= @superstar.region %></p>
+    </div>
+  </div>
+  <br>
 
-<h4> When would you like to book <%= @superstar.name %> ? </h4>
-<%= simple_form_for([@superstar, @booking]) do |f| %>
-  <%= f.input :event_date %>
-  <p><%= f.submit "Book Superstar", class: 'btn btn-primary' %></p>
-<% end %>
-<%= link_to 'Find other Superstars', superstars_path, class:'btn btn-primary'%>
+  <h4> When would you like to book <%= @superstar.name %> ? </h4>
+  <%= simple_form_for([@superstar, @booking]) do |f| %>
+    <%= f.input :event_date %>
+    <p><%= f.submit "Book Superstar", class: 'btn btn-primary' %></p>
+  <% end %>
+  <%= link_to 'Find other Superstars', superstars_path, class:'btn btn-primary'%>
+</div>
