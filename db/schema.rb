@@ -34,10 +34,6 @@ ActiveRecord::Schema.define(version: 2021_11_17_121413) do
     t.bigint "user_id"
     t.string "bio"
     t.float "price"
-    t.boolean "wedding"
-    t.boolean "party"
-    t.boolean "graduation"
-    t.boolean "honeymoons"
     t.string "region"
     t.index ["user_id"], name: "index_superstars_on_user_id"
   end

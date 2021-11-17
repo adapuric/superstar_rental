@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: #c486b6;
+  background: rgba(101, 0, 79, 1);
 ;
 }
 
@@ -13,6 +13,19 @@
   width: 60px;
 }
 
-.nav-item .nav-item-active {
+.nav-link {
   color: white;
+  margin-right: 5px;
+}
+
+.nav-link:hover {
+  color: black;
+  margin-right: 5px;
+}
+
+.navbar-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin: 0px;
 }
