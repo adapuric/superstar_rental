@@ -1,6 +1,0 @@
-<h1>Make a new booking for <%= @superstar.name %> </h1>
-
-<%= simple_form_for([@superstar, @booking]) do |f| %>
-  <%= f.input :event_date %>
-  <%= f.submit class: 'btn btn-primary' %>
-<% end %>
