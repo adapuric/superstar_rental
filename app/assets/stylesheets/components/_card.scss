@@ -1,15 +1,23 @@
 .card {
   height: 250px;
   width: 280px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   margin-right: 10px;
   border-radius: 15px;
   height: fit-content;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+  transition: 0.3s;
+  border: none;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
 }
 
 .card-body {
   background-color: rgba(101, 0, 79, 1);
   height: fit-content;
+  border-radius: 15px;
 }
 
 .card-title {
