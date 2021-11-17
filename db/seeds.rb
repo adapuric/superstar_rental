@@ -117,7 +117,7 @@ liam = Superstar.create!(
   name: "Liam Hemsworth",
   event_type: "party",
   availabilities: true,
-  image_url: "https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTU0MDQyNzUyMzgyODA1NzU1/aap-rocky-from-the-film-monster-poses-for-a-portrait-in-the-youtube-x-getty-images-portrait-studio-at-2018-sundance-film-festival-on-january-22-2018-in-park-city-utah-photo-by-robby-klein_getty-images.jpg",
+  image_url: "https://tbivision.com/files/2019/07/Liam-Hemsworth.jpg",
   user_id: User.all.sample.id,
   bio: "My speciality is to smile",
   price: 1000,
