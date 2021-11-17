@@ -1,9 +1,13 @@
-<h3><%= @superstar.name %></h3>
-<p><%= @superstar.event_type %></p>
-<p><%= @superstar.availabilities %></p>
-<p><%= @superstar.bio %></p>
-<p><%= @superstar.price %></p>
-<p><%= @superstar.region %></p>
+<h3>Make a new booking for <%= @superstar.name %> </h3>
+<p> I am available for <%= @superstar.event_type %></p>
+<p> Bio: <%= @superstar.bio %></p>
+<p> I come at a price of: € <%= @superstar.price %></p>
+<p>I am available in the following regions: <%= @superstar.region %></p>
 <br>
-<%= link_to 'Make a Booking', new_superstar_booking_path(@superstar)%>
-<br>
+
+<h4> When would you like to book <%= @superstar.name %> ? </h4>
+<%= simple_form_for([@superstar, @booking]) do |f| %>
+  <%= f.input :event_date %>
+  <p><%= f.submit "Book Superstar", class: 'btn btn-primary' %></p>
+<% end %>
+<%= link_to 'Find other Superstars', superstars_path, class:'btn btn-primary'%>
