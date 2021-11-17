@@ -1,5 +1,9 @@
 class BookingsController < ApplicationController
   before_action :set_superstar, only: [:new, :create]
+  before_action :set_booking, only: [:show]
+
+  def show
+  end
 
   def new
     @booking = Booking.new
@@ -9,10 +13,12 @@ class BookingsController < ApplicationController
     @superstar = Superstar.find(params[:superstar_id])
     @booking = Booking.new(booking_params)
     @booking.superstar = @superstar
+    @booking.user = current_user
+
     if @booking.save
-      redirect_to superstar_path(@superstar)
+      redirect_to booking_path(@booking)
     else
-      render :new
+      render 'superstars/show'
     end
   end
 
