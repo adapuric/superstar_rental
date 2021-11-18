@@ -24,4 +24,24 @@
       <% end %>
     <%= link_to 'Find other Superstars', superstars_path, class:'btn btn-dark h-100'%>
   </div>
+
+  <h1>Add review for <%= @superstar.name %></h1>
+
+  <%= simple_form_for([@superstar, @review]) do |f| %>
+    <%= f.input :content %>
+    <%= f.input :rating %>
+    <%= f.submit class: 'btn btn-primary' %>
+  <% end %>
+
+<br>
+
+  <ul class="list-group">
+  <% @superstar.reviews.each do |review| %>
+    <li class="list-group-item">
+      <%= review.content %>
+      <%= review.rating %>
+    </li>
+  <% end %>
+  </ul>
+  <br>
 </div>

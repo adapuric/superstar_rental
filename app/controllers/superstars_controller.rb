@@ -10,5 +10,6 @@ class SuperstarsController < ApplicationController
   def show
     @superstar = Superstar.find(params[:id])
     @booking = Booking.new
+    @review = Review.new
   end
 end

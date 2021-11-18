@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_18_142835) do
+ActiveRecord::Schema.define(version: 2021_11_18_165728) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(version: 2021_11_18_142835) do
     t.integer "rating"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "superstar_id"
+    t.index ["superstar_id"], name: "index_reviews_on_superstar_id"
   end
 
   create_table "superstars", force: :cascade do |t|
@@ -65,5 +67,6 @@ ActiveRecord::Schema.define(version: 2021_11_18_142835) do
 
   add_foreign_key "bookings", "superstars"
   add_foreign_key "bookings", "users"
+  add_foreign_key "reviews", "superstars"
   add_foreign_key "superstars", "users"
 end
