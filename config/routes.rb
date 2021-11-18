@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
 
   resources :superstars do
-  resources :bookings, only: [:new, :create]
-  resources :reviews, only: [:create]
+    resources :bookings, only: [:new, :create]
+    resources :reviews, only: [ :create ]
   end
   resources :bookings, only: [:show, :destroy]
 end
