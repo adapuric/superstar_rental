@@ -70,7 +70,7 @@ Superstar.create!(
 )
 
 Superstar.create!(
-  name: "Young Johny Depp",
+  name: "Young Johnny Depp",
   event_type: "honeymoon",
   availabilities: true,
   image_url: "https://www.the-sun.com/wp-content/uploads/sites/6/2020/04/Johnny-Depp-89-2378-24jpg-JS449176197.jpg?strip=all&w=641",
@@ -97,7 +97,7 @@ Superstar.create!(
   availabilities: true,
   image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Pete_Davidson_in_2015_%2817073107891%29.jpg/440px-Pete_Davidson_in_2015_%2817073107891%29.jpg",
   user_id: User.all.sample.id,
-  bio: "My speciality is to make people lough",
+  bio: "My speciality is to make people laugh",
   price: 1000,
   region: "South America",
 )
