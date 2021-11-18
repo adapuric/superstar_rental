@@ -124,4 +124,4 @@ Superstar.create!(
   region: "Europe",
 )
 
-puts "Finished!",
+puts "Finished!"
