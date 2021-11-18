@@ -13,4 +13,8 @@ class Superstar < ApplicationRecord
       using: {
         tsearch: { prefix: true }
       }
+
+  def self.event_type
+    ["wedding", "birthday", "honeymoon", "party"]
   end
+end
