@@ -6,4 +6,8 @@ class Superstar < ApplicationRecord
   validates :bio, presence: true
   validates :price, presence: true
   validates :region, presence: true
+
+  def self.event_types
+    ["wedding", "birthday", "honeymoon", "party"]
+  end
 end
