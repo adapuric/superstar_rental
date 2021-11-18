@@ -1,13 +1,21 @@
-<div class="banner">
-  <div class="container">
-    <h2> Congratulations!</h2>
-    <h3>You will have <%=@booking.superstar.name%> join you at your <%=@booking.superstar.event_type%>!</h3>
-    <br>
-    <br>
-    <h4>TOTAL PRICE €<%=@booking.superstar.price%></h4>
-    <br>
-    Thanks for choosing Celebritify!
-    <br>
-    <%= link_to 'Find other Superstars', superstars_path, class:'btn btn-primary'%>
+  <div class="congratulations-banner" style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(https://images.unsplash.com/photo-1607499457689-3fd1ac3ffcdd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2940&q=80);">
+    <div class="container text-center">
+      <h1 >Congratulations🎉</h1>
+      <br>
+      <br>
+      <br>
+      <h2>You will have <%=@booking.superstar.name%> join you at your <%=@booking.superstar.event_type%></h2>
+      <br>
+      <br>
+      <h3>Total Price €<%=@booking.superstar.price%></h3>
+      <br>
+      <br>
+      <h4>Thanks for choosing Celebritify!</h4>
+      <br>
+      <%= link_to 'Find other Superstars', superstars_path, class:'btn btn-dark'%>
+      <br>
+    </div>
   </div>
-</div>
+
+    <%# <div class="container">
+    <h1 class="text-center mb-5">Featured</h1> %>
