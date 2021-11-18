@@ -5,7 +5,7 @@ class SuperstarsController < ApplicationController
     else
       @superstars = Superstar.all
     end
-    if params[:button] && params[:query] != "" && Superstar.all.event_types.include?(params[:query])
+    if params[:button] && params[:query] != "" && Superstar.all.event_type.include?(params[:query])
       @superstars = Superstar.all.select { |superstar| superstar.event_type.downcase.include?(params[:query].downcase) }
     elsif params[:button] && params[:query] != ""
       @superstars = Superstar.all.select { |superstar| superstar.name.downcase.include?(params[:query].downcase) }
