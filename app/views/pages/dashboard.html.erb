@@ -1,0 +1,34 @@
+
+<br>
+
+<div class="container">
+
+  <h3>My Superstars</h3>
+    <div class="">
+      <% @superstars.each do |superstar| %>
+        <div class="" class="col-6">
+          <%= image_tag superstar.image_url, class: "card-img-top" %>
+          <div class="">
+            <div class="">
+              <p><%= superstar.name  %></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+  <h3> My Bookings</h3>
+    <div class=" ">
+      <% @bookings.each do |booking| %>
+        <div class="card" style="width: 18rem;">
+          <%= image_tag booking.superstar.image_url, class: "card-img-top" %>
+          <div class="card-body">
+            <div class="card-body">
+              <p><%= booking.superstar.name %></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+</div>
