@@ -1,10 +1,28 @@
 .footer {
-  background: black;
-  height: fit-content;
+  background: #000000;
   padding: 30px;
   color: rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-copyright {
   color: white;
+}
+
+.footer-socialmedia {
+    border: 1px;
+    display: flex;
+
+    .fbicon img{
+        width: 128px;
+        margin: -36px;
+    }
+
+    .twicon img{
+        width: 128px;
+        margin: -36px;
+        margin-top: -32px;
+    }
 }
