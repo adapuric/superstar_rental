@@ -19,9 +19,9 @@
   <h4> When would you like to book <%= @superstar.name %> ? </h4>
     <%= simple_form_for([@superstar, @booking]) do |f| %>
       <%= f.input :event_date %>
-  <div class="d-flex mt-5">
+      <div class="d-flex mt-5">
       <p><%= f.submit "Book Superstar", class: 'btn btn-dark mr-3' %></p>
-    <% end %>
+      <% end %>
     <%= link_to 'Find other Superstars', superstars_path, class:'btn btn-dark h-100'%>
   </div>
 </div>
