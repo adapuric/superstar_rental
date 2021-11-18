@@ -1,27 +1,23 @@
-<div class="container">
-  <div class="row text-center mt-5">
-    <div class="col-sm-8 text-left">
-      <h3 class="mb-4">Make a new booking for <%= @superstar.name %> </h3>
-      <%= image_tag @superstar.image_url, class: "avatar-large mb-4", alt: "avatar-large" %>
-      <p> I am available for <strong><%= @superstar.event_type %></strong></p>
-      <p> Bio: <%= @superstar.bio %></p>
-    </div>
-    <div class="col-sm-4">
-      <br>
-      <br>
-      <br>
-      <h2><strong>€ <%= @superstar.price %></strong></h2>
-      <p>Available in: <%= @superstar.region %></p>
-    </div>
-  </div>
+<html>
+  <div class="container center-text">
+    <h4 class="booking-title"> <%= @superstar.name.upcase %>
+    </h4>
+        <%= image_tag @superstar.image_url, class: "avatar-large mb-4", alt: "avatar-large" %>
+        <p class =showpage-texts> <strong>Event Type:</strong> <%= @superstar.event_type.capitalize %>
+        </p>
+        <p class =showpage-texts> <strong>Bio:</strong> <%= @superstar.bio %>
+        </p>
+        <h2 class =showpage-texts><strong>Price: </strong>€ <%= @superstar.price %>
+      </h2>
+      <p class =showpage-texts><strong>Available in:</strong> <%= @superstar.region %>
+    </p>
   <br>
 
-  <h4> When would you like to book <%= @superstar.name %> ? </h4>
-    <%= simple_form_for([@superstar, @booking]) do |f| %>
-      <%= f.input :event_date %>
-      <div class="d-flex mt-5">
-      <p><%= f.submit "Book Superstar", class: 'btn btn-dark mr-3' %></p>
-      <% end %>
-    <%= link_to 'Find other Superstars', superstars_path, class:'btn btn-dark h-100'%>
+    <h4 class =showpage-texts><strong>When would you want <%= @superstar.name %> to attend your <%= @superstar.event_type%>?</strong>
+      <%= simple_form_for([@superstar, @booking]) do |f| %>
+        <%= f.input :event_date %> </h4>
+          <p><%= f.submit "BOOK SUPERSTAR", class: 'btn confirm-book' %></p>
+        <% end %>
+    <%= link_to '← Back to Starhunt', superstars_path, class: " go-back-arrow"%>
   </div>
-</div>
+</html>
