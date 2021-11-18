@@ -6,4 +6,11 @@ class Superstar < ApplicationRecord
   validates :bio, presence: true
   validates :price, presence: true
   validates :region, presence: true
-end
+
+  include PgSearch::Model
+    pg_search_scope :search_by_name_and_event_type,
+      against: [ :name, :event_type ],
+      using: {
+        tsearch: { prefix: true }
+      }
+  end
