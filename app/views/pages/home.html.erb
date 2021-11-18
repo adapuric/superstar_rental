@@ -36,19 +36,28 @@
 <br>
 <br>
 
+
 <div class="container">
+<%= link_to superstars_path(utf8: "✓" , :query => "wedding", button: ""), style: "text-decoration: none;" do %>
   <div class="card-category mb-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80)">
-    Music
+    Wedding
   </div>
+<% end %>
+<%= link_to superstars_path(utf8: "✓" , :query => "birthday", button: ""), style: "text-decoration: none;" do %>
   <div class="card-category mb-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1459865264687-595d652de67e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80)">
-    Sports
+    Birthday
   </div>
+<% end %>
+<%= link_to superstars_path(utf8: "✓" , :query => "honeymoon", button: ""), style: "text-decoration: none;" do %>
     <div class="card-category mb-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1581548708095-7158f2e63857?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80)">
-    TV Person
+    Honeymoon
   </div>
+<% end %>
+<%= link_to superstars_path(utf8: "✓" , :query => "party", button: ""), style: "text-decoration: none;" do %>
   <div class="card-category mb-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1571456331030-a1369bc759dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80)">
-    Comedy
+    Party
   </div>
+<% end %>
 <br>
 <br>
   <div>
