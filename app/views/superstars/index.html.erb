@@ -4,9 +4,9 @@
       <%= text_field_tag :query,
         params[:query],
         class: "form-control",
-        placeholder: "Find a superstar or a superstar event type"
+        placeholder: "Find your Superstar..."
         %>
-      <%= submit_tag "Search", class: "btn btn-dark" %>
+      <p class= "search-text"><%= submit_tag "Search", class: "btn btn-dark" %></p>
     <% end %>
   </div>
 </div>
@@ -26,9 +26,9 @@
             <div class="card" style="width: 18rem;">
               <%= image_tag superstar.image_url, class: "card-img-top" %>
               <div class="card-body">
-                <h5 class="card-title"><%= superstar.name %></h5>
-                <p class="card-text"> <%= superstar.event_type %> </p>
-                <%= link_to 'Pick Me!', superstar, class:"btn btn-dark"%>
+                <h5 class="card-title"><%= superstar.name.upcase %></h5>
+                <p class="card-text"> <%= superstar.event_type.capitalize %> </p>
+                <%= link_to 'Pick Me!', superstar, class:"btn confirm-pick"%>
               </div>
             </div>
           <% end %>

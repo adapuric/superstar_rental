@@ -1,5 +1,5 @@
 <html>
-  <div class="container d-flex justify-content-between left-text">
+  <div class="container d-flex justify-content-between left-text mt-4">
     <div>
     <h4 class="booking-title"> <%= @superstar.name.upcase %>
     </h4>
@@ -13,6 +13,7 @@
       <p class =showpage-texts><strong>Available in:</strong> <%= @superstar.region %>
     </p>
     <br>
+        <%= link_to '← Back to Starhunt', superstars_path, class: " go-back-arrow"%>
     </div>
 
   <div>
@@ -22,21 +23,29 @@
         <%= f.input :event_date %> </h4>
           <p><%= f.submit "BOOK SUPERSTAR", class: 'btn confirm-book' %></p>
         <% end %>
-    <%= link_to '← Back to Starhunt', superstars_path, class: " go-back-arrow"%>
+    <br>
+    <br>
+    <br>
+    <br>
     </div>
   </div>
   </div>
+    <br>
+    <br>
+    <br>
+    <br>
+  <div class="container center-review">
+  <h4 style="text-align:center" class="review-text">Review <%= @superstar.name %>'s Services:</h4>
 
-  <h1>Add review for <%= @superstar.name %></h1>
-
-  <%= simple_form_for [@superstar, @review] do |f| %>
+  <p class =review-mini-texts><%= simple_form_for [@superstar, @review] do |f| %>
     <%= f.input :content %>
-    <%= f.input :rating %>
-    <%= f.submit class: 'btn btn-primary' %>
+    <%= f.input :rating %></p>
+    <%= f.submit class: 'btn btn-review' %>
   <% end %>
 
 <br>
 
+<h4 class="review-text">Previous Reviews</h4>
   <ul class="list-group">
   <% @superstar.reviews.each do |review| %>
     <li class="list-group-item">
@@ -46,7 +55,7 @@
   <% end %>
   </ul>
   <br>
-
+</div>
 
 
 </html>
