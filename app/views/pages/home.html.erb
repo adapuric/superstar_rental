@@ -1,19 +1,14 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80);">
   <div class="container">
     <h1 class="mb-5">Find a celebrity to attend <br>your event</h1>
-    <%= simple_form_for :search, url: root_path, method: :get do |f| %>
-      <div class="search-form-control form-group">
-        <input class="form-control string required" type="text" name="search[query]" id="search_query" />
-        <button name="button" type="submit" class="btn btn-dark">
-        <i class="fas fa-search"></i> Search
-        </button>
-      </div>
-    <% end %>
+    <%= link_to 'Starhunt', superstars_path, class:'btn btn-devise'%>
+    <%= link_to 'Create Star', superstars_path, class:'btn btn-devise'%>
   </div>
 </div>
 
 <br>
 <br>
+
 
 <h1 class="container text-center mb-5">Featured</h1>
 <div class="container d-flex justify-content-center" >
