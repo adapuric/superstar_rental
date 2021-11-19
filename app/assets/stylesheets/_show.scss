@@ -1,5 +1,5 @@
 .booking-title {
-  font-size: 30px;
+  font-size: 45px;
   color: rgb(54, 2, 43);
   margin: 0px;
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
@@ -7,13 +7,18 @@
 }
 
 .showpage-texts {
-  font-size: 15px;
+  font-size: 20px;
   font-weight: lighter;
   color: rgb(70, 2, 55);
   margin: 0px;
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif
 }
 
-.center-text {
-  text-align: center;
+.left-text {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.forms-right {
+  text-align: right;
 }
