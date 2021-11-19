@@ -18,9 +18,10 @@
 
   <div>
   <div class ="forms-right">
-    <h4 class =showpage-texts><strong>When would you want <%= @superstar.name %> to attend your <%= @superstar.event_type%>?</strong>
+    <h4 class =showpage-texts><strong>When will <%= @superstar.name %> attend your <%= @superstar.event_type%>?</strong>
       <%= simple_form_for([@superstar, @booking]) do |f| %>
         <%= f.input :event_date %> </h4>
+      <br>
           <p><%= f.submit "BOOK SUPERSTAR", class: 'btn confirm-book' %></p>
         <% end %>
     <br>
@@ -30,22 +31,26 @@
     </div>
   </div>
   </div>
-    <br>
-    <br>
-    <br>
-    <br>
   <div class="container center-review">
   <h4 style="text-align:center" class="review-text">Review <%= @superstar.name %>'s Services:</h4>
+  </div>
 
-  <p class =review-mini-texts><%= simple_form_for [@superstar, @review] do |f| %>
-    <%= f.input :content %>
+  <div class="container">
+  <%= simple_form_for [@superstar, @review] do |f| %>
+    <p class =review-mini-texts><%= f.input :content %>
     <%= f.input :rating %></p>
-    <%= f.submit class: 'btn btn-review' %>
+    </div>
+      <div class="container center-review">
+      <%= f.submit class: 'btn btn-review' %>
+      </div>
   <% end %>
 
 <br>
 
+<div class="container center-review">
 <h4 class="review-text">Previous Reviews</h4>
+</div>
+<div class=container>
   <ul class="list-group">
   <% @superstar.reviews.each do |review| %>
     <li class="list-group-item">
@@ -56,6 +61,7 @@
   </ul>
   <br>
 </div>
+
 
 
 </html>
