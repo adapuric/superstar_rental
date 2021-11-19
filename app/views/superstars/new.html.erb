@@ -1,7 +1,8 @@
-<div class="container">
+<div style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(https://images.unsplash.com/photo-1607499457689-3fd1ac3ffcdd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2940&q=80); color:white;">
+<div class="container d-flex justify-content-center w-50">
   <div class="row">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-      <h1>Create a superstar profile</h1>
+    <div class="col-sm-12">
+      <h1 class="mt-5">Create a superstar profile</h1>
       <%= simple_form_for @superstar do |f| %>
         <%= f.input :name %>
         <%= f.input :event_type %>
@@ -9,8 +10,9 @@
         <%= f.input :price %>
         <%= f.input :region %>
         <%= f.input :image_url %>
-        <%= f.submit class: 'btn btn-primary' %>
+        <%= f.submit class: 'btn btn-dark mt-3 mb-5' %>
       <% end %>
     </div>
   </div>
+</div>
 </div>
