@@ -8,6 +8,7 @@
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
   transition: 0.3s;
   border: none;
+  transition: ease 0.3s;
 }
 
 .card img {
@@ -18,7 +19,7 @@
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+  box-shadow: 0 16px 32px 0 rgba(0,0,0,0.8);
 }
 
 .card-body {
@@ -49,4 +50,20 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  transition: ease 0.3s;
+}
+
+.card-category:hover {
+  background-size: cover;
+  background-position: center;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.8);
 }
