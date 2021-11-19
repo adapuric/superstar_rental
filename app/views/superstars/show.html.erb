@@ -1,5 +1,6 @@
 <html>
-  <div class="container center-text">
+  <div class="container d-flex justify-content-between left-text">
+    <div>
     <h4 class="booking-title"> <%= @superstar.name.upcase %>
     </h4>
         <%= image_tag @superstar.image_url, class: "avatar-large mb-4", alt: "avatar-large" %>
@@ -11,20 +12,24 @@
       </h2>
       <p class =showpage-texts><strong>Available in:</strong> <%= @superstar.region %>
     </p>
-  <br>
+    <br>
+    </div>
 
+  <div>
+  <div class ="forms-right">
     <h4 class =showpage-texts><strong>When would you want <%= @superstar.name %> to attend your <%= @superstar.event_type%>?</strong>
       <%= simple_form_for([@superstar, @booking]) do |f| %>
         <%= f.input :event_date %> </h4>
           <p><%= f.submit "BOOK SUPERSTAR", class: 'btn confirm-book' %></p>
         <% end %>
     <%= link_to '← Back to Starhunt', superstars_path, class: " go-back-arrow"%>
+    </div>
   </div>
-
+  </div>
 
   <h1>Add review for <%= @superstar.name %></h1>
 
-  <%= simple_form_for([@superstar, @review]) do |f| %>
+  <%= simple_form_for [@superstar, @review] do |f| %>
     <%= f.input :content %>
     <%= f.input :rating %>
     <%= f.submit class: 'btn btn-primary' %>
@@ -41,6 +46,7 @@
   <% end %>
   </ul>
   <br>
-</div>
+
+
 
 </html>
