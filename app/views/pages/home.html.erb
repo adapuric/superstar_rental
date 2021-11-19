@@ -15,10 +15,10 @@
 <br>
 <br>
 
-<div class="container">
-  <h1 class="text-center mb-5">Featured</h1>
-  <div class="d-flex col justify-content-center">
-    <div class="row justify-content-between">
+<h1 class="container text-center mb-5">Featured</h1>
+<div class="container d-flex justify-content-center" >
+  <div class="d-flex justify-content-center">
+    <div class="row">
       <% @superstars.first(3).each do |superstar| %>
         <div class="card mr-5" style="width: 18rem;">
           <%= image_tag superstar.image_url, class: "card-img-top" %>
@@ -54,13 +54,14 @@
   </div>
 <% end %>
 <%= link_to superstars_path(utf8: "✓" , :query => "party", button: ""), style: "text-decoration: none;" do %>
-  <div class="card-category mb-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1571456331030-a1369bc759dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80)">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1571456331030-a1369bc759dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80)">
     Party
   </div>
 <% end %>
 <br>
 <br>
-  <div>
-  <%= link_to 'All superstars', superstars_path, class:'btn btn-dark pull-right'%>
+  <div class="d-flex justify-content-center mb-5">
+  <%= link_to 'ALL SUPERSTARS ☞', superstars_path, class:'btn btn-rgba'%>
   </div>
+</div>
 </div>
