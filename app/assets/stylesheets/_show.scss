@@ -8,7 +8,6 @@
 
 .showpage-texts {
   font-size: 20px;
-  font-weight: lighter;
   color: rgb(70, 2, 55);
   margin: 0px;
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif
@@ -37,7 +36,7 @@
 }
 
 .review-mini-texts {
-    font-size: 20px;
+  font-size: 20px;
   font-weight: lighter;
   color: white;
   margin: 0px;
@@ -54,10 +53,10 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.4);
 }
 
-body {
-  background-color: rgb(70, 2, 55);
-}
-
 .text-input-white {
   color: white;
+}
+
+.show-body {
+  background-color:rgb(70, 2, 55);
 }

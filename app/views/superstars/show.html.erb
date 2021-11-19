@@ -1,14 +1,13 @@
-<html>
-  <div>
-  <div class="container container-show d-flex justify-content-between left-text mt-4">
+  <div class="show-body">
+  <div class="container container-show d-flex justify-content-between left-text">
     <div>
     <h4 class="booking-title mb-4"> <%= @superstar.name.upcase %>
     </h4>
         <%= image_tag @superstar.image_url, class: "avatar-large mb-4", alt: "avatar-large" %>
-        <p class =showpage-texts> <strong>Event Type:</strong> <%= @superstar.event_type.capitalize %></p>
-        <p class =showpage-texts><strong>Bio:</strong> <%= @superstar.bio %></p>
-        <h2 class =showpage-texts><strong>Price: </strong>€ <%= @superstar.price %></h2>
-      <p class =showpage-texts><strong>Available in:</strong> <%= @superstar.region %></p>
+        <p class="showpage-texts"> <strong>Event Type:</strong> <%= @superstar.event_type.capitalize %></p>
+        <p class="showpage-texts"><strong>Bio:</strong> <%= @superstar.bio %></p>
+        <h2 class="showpage-texts"><strong>Price: </strong>€ <%= @superstar.price %></h2>
+      <p class="showpage-texts"><strong>Available in:</strong> <%= @superstar.region %></p>
     <br>
         <%= link_to '← Back to Starhunt', superstars_path, class: " go-back-arrow"%>
     </div>
@@ -59,7 +58,3 @@
   </ul>
   <br>
 </div>
-
-
-
-</html>
