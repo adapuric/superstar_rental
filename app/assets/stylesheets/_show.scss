@@ -27,7 +27,7 @@
 .review-text {
   font-size: 25px;
   font-weight: lighter;
-  color: rgb(70, 2, 55);
+  color: white;
   margin-top: 30px;
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif
 }
@@ -39,7 +39,25 @@
 .review-mini-texts {
     font-size: 20px;
   font-weight: lighter;
-  color: rgb(70, 2, 55);
+  color: white;
   margin: 0px;
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif
+}
+
+.container-show {
+  background-color: white;
+  padding: 40px;
+  box-shadow: 0 0 15px rgba(255,255,255, 1);
+}
+
+.container-show img {
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+body {
+  background-color: rgb(70, 2, 55);
+}
+
+.text-input-white {
+  color: white;
 }
