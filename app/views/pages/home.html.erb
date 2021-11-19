@@ -1,8 +1,8 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80);">
   <div class="container">
-    <h1 class="mb-5">Find a celebrity to attend <br>your event</h1>
+    <h1 class="mb-5 homepage">Find a celebrity to attend your event</h1>
     <%= link_to 'Starhunt', superstars_path, class:'btn home-starhunt'%>
-    <%= link_to 'Create Star', superstars_path, class:'btn home-create'%>
+    <%= link_to 'Create Star', new_superstar_path, class:'btn home-create'%>
   </div>
 </div>
 
@@ -10,7 +10,7 @@
 <br>
 
 
-<h1 class="container text-center mb-5">Featured</h1>
+<h1 class="container text-center mb-5 homepagetitle">Featured</h1>
 <div class="container d-flex justify-content-center" >
   <div class="d-flex justify-content-center">
     <div class="row">
@@ -18,9 +18,9 @@
         <div class="card mr-5" style="width: 18rem;">
           <%= image_tag superstar.image_url, class: "card-img-top" %>
           <div class="card-body">
-            <h5 class="card-title"><%= superstar.name %></h5>
-            <p class="card-text"> <%= superstar.event_type %> </p>
-            <%= link_to 'Pick Me!', superstar, class:"btn btn-dark"%>
+            <h5 class="card-title"><%= superstar.name.upcase %></h5>
+            <p class="card-text"> <%= superstar.event_type.capitalize %> </p>
+            <%= link_to 'Pick Me!', superstar, class:"btn confirm-pick"%>
           </div>
         </div>
       <% end %>
