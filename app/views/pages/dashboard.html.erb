@@ -1,22 +1,27 @@
 <div class="container d-flex justify-content-end">
-  <%= link_to 'Create Superstar', new_superstar_path, class:'btn btn-dark mt-5 mb-5'%>
+  <%= link_to 'Create Superstar', new_superstar_path, class:'btn btn-dark mr-3 mt-5 mb-5'%>
+  <%= link_to 'Book a Superstar', superstars_path, class:'btn btn-dark mt-5 mb-5'%>
 </div>
 
-<div class="container container-dashboard mb-4">
+<div class="container container-dashboard mb-5">
 
   <div class="dashboard-section">
     <h3>My Superstars</h3>
       <div class="">
-        <% @superstars.each do |superstar| %>
-          <div class="card mt-4" style="width: 18rem;">
-            <%= image_tag superstar.image_url, class: "card-img-top" %>
-            <div class="card-body">
-              <div class="card-title">
-                <h5><%= superstar.name  %></h5>
-                <p class="card-text"> <%= superstar.event_type %> </p>
+        <% if @user.superstars.exists? %>
+          <% @superstars.each do |superstar| %>
+            <div class="card mt-4" style="width: 18rem;">
+              <%= image_tag superstar.image_url, class: "card-img-top" %>
+              <div class="card-body">
+                <div class="card-title">
+                  <h5><%= superstar.name  %></h5>
+                  <p class="card-text"> <%= superstar.event_type %> </p>
+                </div>
               </div>
             </div>
-          </div>
+          <% end %>
+        <% else %>
+          <p>No superstars created yet.</p>
         <% end %>
       </div>
     </div>
@@ -24,16 +29,21 @@
   <div class="dashboard-section">
     <h3> My Bookings</h3>
       <div class="">
-        <% @bookings.each do |booking| %>
-          <div class="card mt-4" style="width: 18rem;">
-            <%= image_tag booking.superstar.image_url, class: "card-img-top" %>
-            <div class="card-body">
-              <div class="card-title">
-                <h5><%= booking.superstar.name %></h5>
-                <p class="card-text"> <%= booking.superstar.event_type %> </p>
+        <% if @user.bookings.exists? %>
+          <% @bookings.each do |booking| %>
+            <div class="card mt-4" style="width: 18rem;">
+              <%= image_tag booking.superstar.image_url, class: "card-img-top" %>
+              <div class="card-body">
+                <div class="card-title">
+                  <h5><%= booking.superstar.name %></h5>
+                  <p class="card-text"> <%= booking.superstar.event_type %> </p>
+                  <p class="card-text"> <%= booking.event_date %></p>
+                </div>
               </div>
             </div>
-          </div>
+          <% end %>
+        <% else %>
+          <p>No bookings created yet.</p>
         <% end %>
       </div>
   </div>
