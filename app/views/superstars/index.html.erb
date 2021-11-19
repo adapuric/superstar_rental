@@ -1,19 +1,20 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(https://images.unsplash.com/photo-1595422656453-90448f373188?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80);">
-  <div class="container w-50  ">
+  <div class="container w-50">
     <%= form_tag superstars_path, method: :get do %>
       <%= text_field_tag :query,
         params[:query],
         class: "form-control",
         placeholder: "Find your Superstar..."
         %>
-      <p class= "search-text"><%= submit_tag "Search", class: "btn btn-dark" %></p>
+      <br>
+      <p class= "search-text"><%= submit_tag "Search", class: "btn confirm-pick" %></p>
     <% end %>
   </div>
 </div>
 
 
-  <h1 class="page-title text-center mt-5">All Celebrities</h1>
-  <h4 class ="secondary-title text-center mt-2"> Pick one to star in your super event!</h4>
+  <h1 class="page-title text-center mt-5 indexpagetitle">All SuperStars</h1>
+  <h4 class ="secondary-title text-center mt-2 indexpagesecondtitle"> Pick one to star in your super event!</h4>
 
   <br>
 

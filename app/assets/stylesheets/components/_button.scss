@@ -23,7 +23,7 @@
 .confirm-pick:hover {
   color: white;
   font-weight: bolder;
-  padding: 10px;
+  padding: 9px;
 }
 
 .confirm-book:hover {
@@ -89,6 +89,36 @@
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
   font-weight: bolder;
 }
+
+
+.homepagetitle {
+  font-size: 50px;
+  font-weight: lighter;
+  color: rgb(70, 2, 55);
+  margin-left:  120px;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif
+}
+
+.homepage {
+  font-size: 50px;
+  font-weight: lighter;
+  color: rgb(255, 255, 255);
+  margin-left:  120px;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif
+}
+
+.indexpagetitle {
+  font-size: 50px;
+  font-weight: lighter;
+  color: rgb(70, 2, 55);
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif
+}
+
+.indexpagesecondtitle {
+  font-size: 30px;
+  font-weight: lighter;
+  color: rgb(70, 2, 55);
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif
 
 .confirm-review {
   background-color: transparent;
