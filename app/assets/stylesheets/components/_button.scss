@@ -89,3 +89,25 @@
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
   font-weight: bolder;
 }
+
+.confirm-review {
+  background-color: transparent;
+  line-height: 1;
+  margin: 2px;
+  padding: 8px;
+  color: white;
+  border-color: white;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-weight: bolder;
+}
+
+.confirm-review:hover {
+  background-color: black;
+  line-height: 1;
+  margin: 2px;
+  padding: 8px;
+  color: white;
+  border-color: black;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-weight: bolder;
+}
