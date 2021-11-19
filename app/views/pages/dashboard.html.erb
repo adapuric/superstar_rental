@@ -1,34 +1,38 @@
 
 <br>
 
-<div class="container">
+<div class="container container-dashboard mb-4">
 
-  <h3>My Superstars</h3>
-    <div class="">
-      <% @superstars.each do |superstar| %>
-        <div class="" class="col-6">
-          <%= image_tag superstar.image_url, class: "card-img-top" %>
-          <div class="">
+  <div class="dashboard-section">
+    <h3>My Superstars</h3>
+      <div class="">
+        <% @superstars.each do |superstar| %>
+          <div class="" class="col-6">
+            <%= image_tag superstar.image_url, class: "card-img-top" %>
             <div class="">
-              <p><%= superstar.name  %></p>
+              <div class="">
+                <p><%= superstar.name  %></p>
+              </div>
             </div>
           </div>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
 
-  <h3> My Bookings</h3>
-    <div class=" ">
-      <% @bookings.each do |booking| %>
-        <div class="card" style="width: 18rem;">
-          <%= image_tag booking.superstar.image_url, class: "card-img-top" %>
-          <div class="card-body">
+  <div class="dashboard-section">
+    <h3> My Bookings</h3>
+      <div class=" ">
+        <% @bookings.each do |booking| %>
+          <div class="card" style="width: 18rem;">
+            <%= image_tag booking.superstar.image_url, class: "card-img-top" %>
             <div class="card-body">
-              <p><%= booking.superstar.name %></p>
+              <div class="card-body">
+                <p><%= booking.superstar.name %></p>
+              </div>
             </div>
           </div>
-        </div>
-      <% end %>
-    </div>
+        <% end %>
+      </div>
+  </div>
 
 </div>
