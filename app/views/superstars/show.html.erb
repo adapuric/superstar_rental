@@ -1,17 +1,14 @@
 <html>
-  <div class="container d-flex justify-content-between left-text mt-4">
+  <div>
+  <div class="container container-show d-flex justify-content-between left-text mt-4">
     <div>
-    <h4 class="booking-title"> <%= @superstar.name.upcase %>
+    <h4 class="booking-title mb-4"> <%= @superstar.name.upcase %>
     </h4>
         <%= image_tag @superstar.image_url, class: "avatar-large mb-4", alt: "avatar-large" %>
-        <p class =showpage-texts> <strong>Event Type:</strong> <%= @superstar.event_type.capitalize %>
-        </p>
-        <p class =showpage-texts> <strong>Bio:</strong> <%= @superstar.bio %>
-        </p>
-        <h2 class =showpage-texts><strong>Price: </strong>€ <%= @superstar.price %>
-      </h2>
-      <p class =showpage-texts><strong>Available in:</strong> <%= @superstar.region %>
-    </p>
+        <p class =showpage-texts> <strong>Event Type:</strong> <%= @superstar.event_type.capitalize %></p>
+        <p class =showpage-texts><strong>Bio:</strong> <%= @superstar.bio %></p>
+        <h2 class =showpage-texts><strong>Price: </strong>€ <%= @superstar.price %></h2>
+      <p class =showpage-texts><strong>Available in:</strong> <%= @superstar.region %></p>
     <br>
         <%= link_to '← Back to Starhunt', superstars_path, class: " go-back-arrow"%>
     </div>
@@ -28,32 +25,33 @@
     <br>
     <br>
     <br>
+    <br>
     </div>
   </div>
   </div>
   <div class="container center-review">
-  <h4 style="text-align:center" class="review-text">Review <%= @superstar.name %>'s Services:</h4>
+  <h4 style="text-align:center" class="review-text mb-4 mt-5">Review <%= @superstar.name %>'s Services:</h4>
   </div>
 
   <div class="container">
   <%= simple_form_for [@superstar, @review] do |f| %>
-    <p class =review-mini-texts><%= f.input :content %>
-    <%= f.input :rating %></p>
+    <p class =review-mini-texts><%= f.input :content, label_html: { class:"text-input-white"} %>
+    <%= f.input :rating, label_html: { class:"text-input-white"} %></p>
     </div>
       <div class="container center-review">
-      <%= f.submit class: 'btn btn-review' %>
+      <%= f.submit class: 'btn confirm-review' %>
       </div>
   <% end %>
 
 <br>
 
 <div class="container center-review">
-<h4 class="review-text">Previous Reviews</h4>
+<h4 class="review-text mb-4">Previous Reviews</h4>
 </div>
 <div class=container>
   <ul class="list-group">
   <% @superstar.reviews.each do |review| %>
-    <li class="list-group-item">
+    <li class="list-group-item mb-3">
       <%= review.content %>
       <%= review.rating %>
     </li>
